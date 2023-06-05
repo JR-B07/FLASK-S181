@@ -35,18 +35,6 @@
         color: #201976;
     }
 
-    .mis_datos p {
-        height: 40px;
-        text-align: center;
-        font-size: 18px;
-        line-height: 40px;
-    }
-
-    .mis_datos a {
-        color: white;
-        text-decoration: none;
-    }
-
     .mis_datos a:hover {
         color: white;
         text-decoration: underline;
@@ -66,7 +54,7 @@
         width:100%;
         margin-bottom: 20px;
         font-family: Arial, Helvetica, sans-serif;
-        color: #201976, center;
+        color: #201976;
         text-align: center;
     }
 
@@ -74,24 +62,12 @@
         list-style: none;
     }
 
-    .nav li a {
-        background-color:white;
-        color:#201976;
-        text-decoration: none;
-        padding: 10px 15px;
-        display: block;
-    }
-
     .nav li w {
         background-color:white;
-        color:#201976 center;
-        text-decoration: none;
-        padding: 10px 15px;
+        color:#201976;
+        text-decoration:#201976;
+        padding: 12px;
         display: block;
-    }
-
-    .nav li a:hover {
-        background-color: #434343;
     }
 
     .nav li w:hover {
@@ -99,7 +75,7 @@
     }
 
     .nav>li {
-        float: left;
+        float:center;
     }
 
     .nav li ul {
