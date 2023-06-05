@@ -1,0 +1,123 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: deepskyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'calibri';
+        color: white;
+    }
+
+    .mis_datos {
+        width: 350px;
+        background: white;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 7px 13px 37px white;
+        margin-top: 20px;
+    }
+
+    .controls {
+        width: 100%;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid deepskyblue;
+        font-size: 18px;
+        color: #201976;
+    }
+
+    .mis_datos p {
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .mis_datos a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .mis_datos a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .mis_datos .botons {
+        width: 100%;
+        background: deepskyblue;
+        border: 10px white;
+        padding: 12px;
+        color:#201976;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+
+    #header {
+        width:100%;
+        margin-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #201976, center;
+        text-align: center;
+    }
+
+    ul,ol {
+        list-style: none;
+    }
+
+    .nav li a {
+        background-color:white;
+        color:#201976;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    .nav li w {
+        background-color:white;
+        color:#201976 center;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    .nav li a:hover {
+        background-color: #434343;
+    }
+
+    .nav li w:hover {
+        background-color: #434343;
+    }
+
+    .nav>li {
+        float: left;
+    }
+
+    .nav li ul {
+        display: none;
+        position: center;
+        min-width: 140px;
+    }
+
+    .nav li:hover>ul {
+        display: block;
+    }
+
+    .nav li ul li {
+        position: center;
+    }
+
+    .nav li ul li ul {
+        right: -140px;
+        top: 0px;
+    }
+</style>
