@@ -60,7 +60,7 @@ class AlmacenBebidas:
                 return bebida
         return None
 
-# Función para mostrar el menú de opciones
+
 def mostrar_menu():
     print("\n--- ALMACÉN DE BEBIDAS ---")
     print("1. Alta de bebida")
