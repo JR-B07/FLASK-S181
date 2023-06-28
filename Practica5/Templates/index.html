@@ -10,12 +10,44 @@
         </br>
             <from action="/Guardar" method="POST">
                 
-                <input name"txt" name="txtTitulo" placeholder="Escribe el titulo">
-                <input name"txt" name="txtArtista" placeholder="Escribe el txrArtista">
-                <input name"number" name="txtAnio" placeholder="Escribe el año">
+                <input type="txt" name="txtTitulo" placeholder="Escribe el titulo">
+                <input type="txt" name="txtArtista" placeholder="Escribe el txrArtista">
+                <input type="number" name="txtAnio" placeholder="Escribe el año">
 
             <button type="summit"> Guardar</button>
 
         </from>
-        </body>
-    </html>
+<br>
+<br>
+    
+<h1>Albums Guardados</h1>
+<br>
+<table>
+    <thead>
+        <tr>
+            <td>Id: </td>
+            <td>Album: </td>
+            <td>Artista: </td>
+            <td>Año publicacion: </td>
+        </tr>
+    </thead>
+    <tbody>
+        {%for alb in listAlbums%}
+        <tr>
+            <td>{{alb.0}}</td>
+            <td>{{alb.1}}</td>
+            <td>{{alb.2}}</td>
+            <td>{{alb.3}}</td>
+            <td>
+                <a href="#" Editar></a>
+                <a href="#" Eliminar></a>
+            
+            </td>
+        </tr>
+        
+        {%endfor%}
+    </tbody>
+</table>
+    </body>
+
+</html>
