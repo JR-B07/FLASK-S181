@@ -32,7 +32,7 @@
         </tr>
     </thead>
     <tbody>
-        {%for alb in listAlbums%}
+        {% for alb in listAlbums %}
         <tr>
             <td>{{alb.0}}</td>
             <td>{{alb.1}}</td>
@@ -41,11 +41,10 @@
             <td>
                 <a href="#" Editar></a>
                 <a href="#" Eliminar></a>
-            
             </td>
         </tr>
         
-        {%endfor%}
+        {% endfor alb %}
     </tbody>
 </table>
     </body>
