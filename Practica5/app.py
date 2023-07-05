@@ -1,5 +1,5 @@
 #importacion del framework
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect,url_for,flash
 from flask_mysqldb import MySQL
 
 #inicializacion del app
@@ -40,9 +40,18 @@ def editar(Id):
 def eliminar():
     return "se elimino en la BD"
 
-@app.route('/actualizar/<Id')
+@app.route('/actualizar/<Id>', methods=['POST'])
 def actualizar(Id):
-    return "se elimino en la BD"
+    if request.method == 'POST':
+        varTitulo= request.form['txtTitulo']
+        varArtist= request.form['txtArtist']
+        varAnio= request.form['txtAnio']
+        
+        curAct= mysql.connection.cursor()
+        curAct.execute('Update albums set Titulo= %s, Artista= %s, Anio= %s' WHERE Id=%s(varTitulo,varArtist,varAnio,Id))
+        mysql.connection.commit()
+    flash('Se actualizo el Album'+ varTitulo)
+    return redirect(url_for('index'))
 
 #ejecucion
 if __name__ == '__main__':
