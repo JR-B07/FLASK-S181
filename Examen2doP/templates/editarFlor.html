@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Editar Flor </h1>
+    <br>
+    <br>
+    <br>
+    <form action="/actualizar/{{tb_Flores.0}}" method="POST">
+        <input type="text" name ="Nombre" value="{{tb_Flores.1}}">
+        <input type="number" name="Cantidad" value="{{tb_Flores.2}}">
+        <input type="number" name="Precio"  value="{{tb_Flores.3}}">
+        
+        <button type="submit" >Actualizar</button>
+    
+    
+    </form>   
+</body>
+</html>

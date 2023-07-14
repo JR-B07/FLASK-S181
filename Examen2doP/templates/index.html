@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Floreria</title>
+</head>
+<body>
+
+<br><br><br>
+      <h1>Gestion de Flores<h1>  
+        <br>
+        {% with mensajes= get_flashed_messages() %}
+           {%if mensaje %}
+            {% for msj in mensajes %}
+          <h3> {{msj}} </h3>
+            {%endfor%}
+           {%endif%}
+        {% endwith %} 
+        <br>
+
+
+<form action="/guardar" method="POST">
+    <input type="text" name ="Nombre" placeholder="Nombre de la Flor">
+    <input type="number" name="Cantidad" placeholder="Cantidad de Flores">
+    <input type="number" name="Precio" placeholder="Escribe el Precio">
+    
+    <button type="submit" >Guardar</button>
+</form>    
+
+<br>
+<br>
+
+<table>
+<h1>Guardar Flor</h1>
+ 
+ <thead>
+   <tr>
+    <td>id: </td>
+    <td>Nombre: </td>
+    <td>Cantidad: </td>
+    <td>Precio: </td>
+   </tr>
+ </thead>
+ 
+   <tbody>
+    {% for flr in listaflores %}
+     <tr>
+      <td>{{flr.0}} </td>
+      <td>{{flr.1}} </td>
+      <td>{{flr.2}} </td>
+      <td>{{flr.3}} </td>
+      <td>
+        <a href=/editar/{{flr.0}}> editar </a>
+        <a href= "#" > borrar </a>
+      </td>
+     </tr>
+    {%endfor%}
+   </tbody>
+</table>
+
+</body>
+</html>
