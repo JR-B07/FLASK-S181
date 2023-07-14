@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Crud Albums</title>
+  </head>
+
+  <body>
+    <h1>Album a Eliminar:</h1>
+    <br>
+  </br>
+  <from action="/eliminar/{{album.0}}" method="DELETE">
+
+    <input type="text" name="txtTitulo" value="{{album.0.1}}">
+    <input type="text" name="txtArtista" value="{{album.0.2}}">
+    <input type="number" name="txtAnio" value="{{album.0.3}}">
+
+    <button type="summit"> Eliminar </button>
+
+  </from>
+
+</body>

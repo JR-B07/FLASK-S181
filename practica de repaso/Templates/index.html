@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Frutas</title>
+</head>
+<body>
+
+<br><br><br>
+      <h1>Gestion de Registros<h1>  
+
+        <br>
+        {% with mensajes= get_flashed_messages() %}
+           {%if mensaje %}
+            {% for msj in mensajes %}
+          <h3> {{msj}} </h3>
+            {%endfor%}
+           {%endif%}
+        {% endwith %} 
+        <br>
+
+<form action="/guardar" method="POST">
+            
+    <input type="text" name="txtFruta" placeholder="Ingresa tu Fruta">
+    <input type="text" name="txtTemporada" placeholder="Escribe la Temporada">
+    <input type="number" name="txtPrecio" placeholder="Escribe el Precio">
+    <input type="number" name="txtStock" placeholder="Escribe el Stock">
+    
+    <button type="submit">Guardar</button>
+          
+</form>    
+<br>
+<br>
+<table>
+<h1>Guardar Registro</h1>
+ 
+ <thead>
+   <tr>
+    <td>id: </td>
+    <td>Fruta: </td>
+    <td>Temporad: </td>
+    <td>Precio: </td>
+    <td>Stock: </td>
+   </tr>
+ </thead>
+ 
+   <tbody>
+    {% for tbfrutas1 in Listafrutas %}
+     <tr>
+      <td>{{tbfrutas1.0}} </td>
+      <td>{{tbfrutas1.1}} </td>
+      <td>{{tbfrutas1.2}} </td>
+      <td>{{tbfrutas1.3}} </td>
+      <td>
+        <a href=/editar/{{tbfrutas1.0}}> editar </a>
+        <a href= "#" > borrar </a>
+      </td>
+     </tr>
+    {%endfor%}
+    <table>
+   </tbody>
+
+</body>
+
+</html>
